@@ -1,0 +1,115 @@
+html { font-family: 'PT Sans', Georgia, serif; }
+body {}
+
+.clearfix {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.discussion {
+	float: left;
+	width: 98%;
+	height: 40vh;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: column;
+	border: groove black;
+	overflow: scroll;
+}
+
+.discussion_all {
+	float: left;
+	width: 78%;
+	height: 50vh;
+	margin: 0 auto;
+	display: block;
+	flex-flow: column;
+	border: groove black;
+	overflow: scroll;
+}
+
+.users {
+	width: 20%;
+	height: 50vh;
+	background-color: skyblue;
+	border: groove black;
+	font-size: 2vw;
+	overflow: scroll;
+}
+
+.discussion > .bubble {
+	border-radius: 1em;
+	padding: 0.25em 0.75em;
+	margin: 0.0625em;
+	max-width: 50%;
+}
+
+.discussion > .bubble.sender {
+	align-self: flex-start;
+	background-color: cornflowerblue;
+	color: #fff;
+}
+.discussion > .bubble.recipient {
+	align-self: flex-end;
+	background-color: #efefef;
+}
+
+.discussion > .bubble.sender.first { border-bottom-left-radius: 0.1em; }
+.discussion > .bubble.sender.last { border-top-left-radius: 0.1em; }
+.discussion > .bubble.sender.middle {
+	border-bottom-left-radius: 0.1em;
+ 	border-top-left-radius: 0.1em;
+}
+
+.discussion > .bubble.recipient.first { border-bottom-right-radius: 0.1em; }
+.discussion > .bubble.recipient.last { border-top-right-radius: 0.1em; }
+.discussion > .bubble.recipient.middle {
+	border-bottom-right-radius: 0.1em;
+	border-top-right-radius: 0.1em;
+}
+
+.send_box, .send_box_all { display: box; }
+.message_box , .message_box_all{
+	float: left;
+	width: 60%;
+	margin: 2% 0 2% 1%;
+}
+
+button {
+	float: left;
+	-webkit-appearance: button;
+	position: relative;
+	overflow: hidden;
+	width: 4rem;
+	color: #5585ff;
+	border: 2px solid #5585ff;
+	background-color: transparent;
+	cursor: pointer;
+	line-height: 2;
+	margin-top: 22px;
+	padding: 0;
+	border-radius: 1.5rem;
+	font-size: 1.125rem;
+	text-transform: lowercase;
+	outline: none;
+	transition: transform 0.125s;
+}
+
+.user { cursor: pointer; }
+
+.rooms { display: box; }
+.rooms > .active { background-color: #5585ff; }
+.room { float: left; border: solid 1px black; margin: 5px; padding: 5px; cursor: pointer; }
+
+.blinking{
+	animation:blinkingText 1.2s infinite;
+	background-color: red;
+}
+@keyframes blinkingText{
+    0%{     color: #000;    }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color:transparent;  }
+    100%{   color: #000;    }
+}
