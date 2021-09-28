@@ -98,7 +98,7 @@ var last_msg_time = '<?php echo $last_msg_time; ?>';
 					<section class="rooms">
 <?php if (!empty($rooms)): ?>
 	<?php foreach($rooms as $key => $room): ?>
-						<div class="room<?php echo ($room == 'common' ? ' active' : ''); ?>" onClick="return setActive(this); "><?php echo $room; ?></div>
+						<div class="room<?php echo ($room == 'common' ? ' active' : ''); ?>" onClick="return mirc.setActive(this); "><?php echo $room; ?></div>
 	<?php endforeach; ?>
 	<?php endif; ?>
 					</section>
